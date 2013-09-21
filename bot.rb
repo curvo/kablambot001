@@ -33,7 +33,7 @@ module Bot
   
   def go!
     enemy = opponents.first
-    return fire_at!(enemy, 1) if (can_fire_at?(enemy) && my.ammo > 0)
+    return fire_at!(enemy, 0.75) if (can_fire_at?(enemy) && my.ammo > 0)
     return dodge(enemy) if enemy.can_fire_at?(me)   
     return rest if my.ammo == 0
     return aim_at!(enemy) unless aiming_at?(enemy)
