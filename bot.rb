@@ -38,6 +38,7 @@ module Bot
     return rest if my.ammo == 0
     return aim_at!(enemy) unless aiming_at?(enemy)
     return move_towards!(enemy) if obscured?(enemy)
+    return rest if my.ammo < 10
     return hunt unless enemy
     rest
   end
