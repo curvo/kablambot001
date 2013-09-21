@@ -1,6 +1,6 @@
 require './bot'
 
-extend Bot
+include Bot
 
 on_turn do
   go!
